@@ -1,172 +1,268 @@
 ---
 import Layout from "../layouts/layout.astro";
 
-const socialLinks = {
+const links = {
   youtube: "https://www.youtube.com/@aburnsy",
+  youtubeLatest:
+    "https://www.youtube.com/playlist?list=PLXvgarzxz5v0",
   tiktok: "https://www.tiktok.com/@aburnsy",
   instagram: "https://www.instagram.com/aburnsy_/",
-  patreon: "https://www.patreon.com/Aburnsy",
+  recommendationTool:
+    "https://aburnsy-what-to-watch-wizard.streamlit.app/",
 };
+
+const youtubeEmbed =
+  "https://www.youtube.com/embed/videoseries?list=PLXvgarzxz5v0";
 ---
 
 <Layout
-  title="Watch | Anime Reactions, Reviews & Interviews | Aburnsy"
-  description="Watch first-time anime reactions, reviews, interviews, and educational videos from Burnsy on YouTube."
+  title="Watch | Latest Anime Content from Aburnsy"
+  description="Watch Aburnsy's latest YouTube reactions, newest TikTok and Instagram content, and find your next anime with Burnsy's recommendation tool."
+  image="/images/watch/one-piece.jpg"
 >
-      <section class="watch-hero">
-        <div class="container watch-hero-grid">
-          <div>
-            <p class="eyebrow">Watch Aburnsy</p>
+  <section class="watch-hero">
+    <div class="container watch-hero-grid">
+      <div>
+        <p class="eyebrow">Watch Aburnsy</p>
 
-            <h1>Reactions, Reviews, Interviews, and Anime Conversations.</h1>
+        <h1>Anime Reactions, Recommendations, and Conversations.</h1>
 
-            <p class="watch-hero-lead">
-              Explore first-time reactions, thoughtful reviews, creator
-              interviews, and story-focused anime content from Burnsy.
-            </p>
+        <p class="watch-hero-lead">
+          Catch Burnsy’s latest long-form reactions, discover new short-form
+          anime content, and find the next story worth adding to your watchlist.
+        </p>
 
-            <div class="hero-actions">
-              <a
-                class="button"
-                href={socialLinks.youtube}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit YouTube
-              </a>
+        <div class="hero-actions">
+          <a
+            class="button"
+            href="#latest-youtube"
+          >
+            Watch the Latest
+          </a>
 
-              <a class="button button-secondary" href="/">
-                Return Home
-              </a>
+          <a
+            class="button button-secondary"
+            href={links.youtube}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit YouTube
+          </a>
+        </div>
+      </div>
+
+      <div class="watch-hero-image">
+        <img
+          src="/images/burnsy-watch.jpg"
+          alt="Burnsy creating anime content"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="latest-youtube">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Latest on YouTube</p>
+
+        <h2>Watch Burnsy’s Newest Reaction.</h2>
+
+        <p>
+          This player follows Burnsy’s dedicated Latest playlist, so the newest
+          featured reaction appears here without requiring a website update.
+        </p>
+      </div>
+
+      <div class="latest-youtube-grid">
+        <div class="latest-youtube-player">
+          <iframe
+            src={youtubeEmbed}
+            title="Latest Aburnsy YouTube reaction"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="latest-youtube-copy">
+          <span class="social-embed-label">Latest Reaction</span>
+
+          <h3>Start With the Newest Release.</h3>
+
+          <p>
+            Add each new long-form reaction to the top of the unlisted Latest
+            playlist and this player will begin with it automatically.
+          </p>
+
+          <a
+            class="button"
+            href={links.youtubeLatest}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open the Playlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Latest Short-Form</p>
+
+        <h2>Follow Burnsy on TikTok and Instagram.</h2>
+
+        <p>
+          Browse the newest anime takes, recommendations, creator updates, and
+          short-form conversations directly from Burnsy’s social profiles.
+        </p>
+      </div>
+
+      <div class="social-embed-grid">
+        <article class="social-embed-card">
+          <div class="social-embed-card-heading">
+            <div>
+              <span class="social-embed-label">TikTok</span>
+              <h3>@aburnsy</h3>
             </div>
-          </div>
 
-          <div class="watch-hero-image">
-            <img
-              src="/images/burnsy-watch.jpg"
-              alt="Burnsy creating anime content"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Featured Series</p>
-            <h2>Start With Burnsy’s Current Favorites.</h2>
-            <p>
-              These are the best places to begin if you’re new to the channel.
-            </p>
-          </div>
-
-          <div class="watch-grid">
             <a
-              class="watch-card"
-              href={socialLinks.youtube}
+              href={links.tiktok}
               target="_blank"
               rel="noreferrer"
             >
-              <span class="card-number">01</span>
-              <h3>My Hero Academia</h3>
-              <p>
-                Follow Burnsy’s first-time journey through one of anime’s most
-                recognizable hero stories.
-              </p>
-              <span class="card-link">Watch the Series →</span>
+              Open TikTok →
             </a>
+          </div>
+
+          <div class="social-embed-frame social-embed-frame-tiktok">
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@aburnsy"
+              data-unique-id="aburnsy"
+              data-embed-type="creator"
+              style="max-width: 780px; min-width: 288px;"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  href="https://www.tiktok.com/@aburnsy?refer=creator_embed"
+                >
+                  @aburnsy
+                </a>
+              </section>
+            </blockquote>
+          </div>
+        </article>
+
+        <article class="social-embed-card">
+          <div class="social-embed-card-heading">
+            <div>
+              <span class="social-embed-label">Instagram</span>
+              <h3>@aburnsy_</h3>
+            </div>
 
             <a
-              class="watch-card"
-              href={socialLinks.youtube}
+              href={links.instagram}
               target="_blank"
               rel="noreferrer"
             >
-              <span class="card-number">02</span>
-              <h3>One Piece</h3>
-              <p>
-                Reactions, discussions, and story analysis from one of anime’s
-                biggest adventures.
-              </p>
-              <span class="card-link">Watch the Series →</span>
+              Open Instagram →
             </a>
+          </div>
 
-            <a
-              class="watch-card"
-              href={socialLinks.youtube}
-              target="_blank"
-              rel="noreferrer"
+          <div class="social-embed-frame social-embed-frame-instagram">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/aburnsy_/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
             >
-              <span class="card-number">03</span>
-              <h3>Banana Fish</h3>
-              <p>
-                Thoughtful reactions and conversations about one of Burnsy’s
-                favorite anime stories.
-              </p>
-              <span class="card-link">Explore Banana Fish →</span>
-            </a>
-
-            <a
-              class="watch-card"
-              href={socialLinks.youtube}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span class="card-number">04</span>
-              <h3>Anime Classroom</h3>
-              <p>
-                Story-focused videos exploring characters, themes, and why
-                great anime works.
-              </p>
-              <span class="card-link">Enter the Classroom →</span>
-            </a>
+              <a
+                href="https://www.instagram.com/aburnsy_/"
+                target="_blank"
+              >
+                View @aburnsy_ on Instagram
+              </a>
+            </blockquote>
           </div>
-        </div>
-      </section>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">More From Burnsy</p>
-            <h2>Choose How You Want to Watch.</h2>
-          </div>
+  <section class="section watch-recommendation-section">
+    <div class="container watch-recommendation-grid">
+      <div>
+        <p class="eyebrow">Not Sure What to Watch?</p>
 
-          <div class="watch-category-grid">
-            <article class="watch-category-card">
-              <h3>First-Time Reactions</h3>
-              <p>
-                Genuine reactions to major anime series, followed by discussion
-                and analysis.
-              </p>
-            </article>
+        <h2>Let Burnsy Help You Find Your Next Favorite Anime.</h2>
 
-            <article class="watch-category-card">
-              <h3>Reviews</h3>
-              <p>
-                Honest, spoiler-aware reviews designed to help fans decide what
-                to watch next.
-              </p>
-            </article>
+        <p>
+          Choose your preferred genres, mood, episode length, streaming
+          platforms, and more to get recommendations built around what you
+          actually want to watch.
+        </p>
+      </div>
 
-            <article class="watch-category-card">
-              <h3>Interviews</h3>
-              <p>
-                Conversations with artists, musicians, creators, and people
-                connected to anime and pop culture.
-              </p>
-            </article>
-          </div>
+      <div class="watch-recommendation-card">
+        <span class="watch-recommendation-status">
+          Burnsy’s Recommendation Tool
+        </span>
 
-          <div class="watch-page-cta">
-            <a
-              class="button"
-              href={socialLinks.youtube}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Browse All Videos on YouTube
-            </a>
-          </div>
-        </div>
-      </section>
-    </Layout>
+        <h3>Find Something Worth Watching.</h3>
+
+        <p>
+          Discover classics, current favorites, and hidden gems chosen around
+          your personal preferences.
+        </p>
+
+        <a
+          class="button"
+          href={links.recommendationTool}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Find My Next Anime
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section watch-final-cta">
+    <div class="container watch-final-inner">
+      <div>
+        <p class="eyebrow">More From Burnsy</p>
+
+        <h2>Continue the Conversation.</h2>
+
+        <p>
+          Subscribe on YouTube and follow Burnsy across social media for new
+          reactions, reviews, interviews, and anime recommendations.
+        </p>
+      </div>
+
+      <a
+        class="button"
+        href={links.youtube}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Subscribe on YouTube
+      </a>
+    </div>
+  </section>
+
+  <script
+    is:inline
+    async
+    src="https://www.tiktok.com/embed.js"
+  ></script>
+
+  <script
+    is:inline
+    async
+    src="https://www.instagram.com/embed.js"
+  ></script>
+</Layout>
