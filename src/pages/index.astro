@@ -1,0 +1,298 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const socialLinks = {
+  youtube: "https://www.youtube.com/@aburnsy",
+  tiktok: "https://www.tiktok.com/@aburnsy",
+  instagram: "https://www.instagram.com/aburnsy_/",
+  snapchat: "https://www.snapchat.com/@aburnsy08",
+  patreon: "https://www.patreon.com/Aburnsy",
+  famousBirthdays: "https://www.famousbirthdays.com/people/aburnsy.html",
+};
+---
+
+<Layout
+  title="Aburnsy | Discover the Best of Anime"
+  description="Aburnsy is an anime educator, creator, reviewer and interviewer helping fans discover incredible anime through thoughtful reactions, honest reviews and meaningful conversations."
+>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              Anime Educator • Creator • Reviewer • Interviewer
+            </p>
+
+            <h1>Helping You Discover the Best of Anime.</h1>
+
+            <p class="hero-lead">
+              I’m Burnsy—an anime educator, creator, reviewer, and interviewer
+              helping fans discover incredible stories through thoughtful
+              reactions, honest reviews, and meaningful conversations.
+            </p>
+
+            <p class="hero-belief">
+              I believe anime is one of the greatest storytelling mediums in the
+              world—and my goal is to help more people discover the stories
+              worth watching.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button"
+                href={socialLinks.youtube}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch on YouTube
+              </a>
+
+              <a class="button button-secondary" href="/work-with-burnsy/">
+                Work With Burnsy
+              </a>
+            </div>
+
+            <div class="social-proof">
+              <strong>Trusted by more than 200,000 anime fans</strong>
+              <span> across YouTube, TikTok, Instagram, and beyond. </span>
+            </div>
+
+            <p class="credibility">
+              Featured on Famous Birthdays • YouTube Creator Collective
+            </p>
+          </div>
+
+          <div class="hero-image-wrap">
+            <div class="hero-glow"></div>
+
+            <div class="hero-image-frame">
+              <img
+                src="/images/burnsy-hero.jpg"
+                alt="Burnsy attending a YouTube Creator Collective event"
+              />
+            </div>
+          </div>
+        </div>
+
+        <section class="section section-dark">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Explore</p>
+              <h2>Where Should You Start?</h2>
+              <p>
+                Whether you want to watch, learn, listen, or work together,
+                there’s a clear place to begin.
+              </p>
+            </div>
+
+            <div class="card-grid">
+              <a class="feature-card" id="watch" href="/watch/">
+                <span class="card-number">01</span>
+                <h3>Watch</h3>
+                <p>
+                  Experience genuine first-time reactions, reviews, and anime
+                  discussions.
+                </p>
+                <span class="card-link">Explore Videos →</span>
+              </a>
+
+              <a class="feature-card" href="/watch/">
+                <span class="card-number">02</span>
+                <h3>Anime Classroom</h3>
+                <p>
+                  Go beyond the episode and discover why great anime stories
+                  work.
+                </p>
+                <span class="card-link">Enter the Classroom →</span>
+              </a>
+
+              <a class="feature-card" href="/watch/">
+                <span class="card-number">03</span>
+                <h3>Interviews</h3>
+                <p>
+                  Conversations with creators, musicians, and people inspired by
+                  anime.
+                </p>
+                <span class="card-link">Watch Interviews →</span>
+              </a>
+
+              <a class="feature-card" href="/work-with-burnsy/">
+                <span class="card-number">04</span>
+                <h3>Work With Burnsy</h3>
+                <p>
+                  Explore partnerships, press, sponsorships, conventions, and
+                  appearances.
+                </p>
+                <span class="card-link">Let’s Work Together →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark">
+  <div class="container featured-series">
+
+    <p class="eyebrow">Featured Series</p>
+
+    <h2>My First Time Watching My Hero Academia</h2>
+
+    <p class="featured-description">
+      One of anime's biggest stories... and somehow I've never watched it.
+      Join me as I experience the entire journey for the very first time.
+    </p>
+
+    <div class="featured-poster">
+      <img
+        src="/images/mha-featured.jpg"
+        alt="My First Time Watching My Hero Academia"
+      />
+    </div>
+
+    <div class="featured-button">
+      <a
+        class="button"
+        href="https://youtube.com/playlist?list=PLXJi6km83No9bFnCCSkNfgs1wtqd-J_LP&si=w0SfRxsDMjpa89dk"
+        target="_blank"
+        rel="noreferrer"
+      >
+        ▶ Watch the Series
+      </a>
+    </div>
+
+  </div>
+</section>
+
+        <section class="section section-dark" id="about">
+          <div class="container about-grid">
+            <div class="about-image-frame">
+              <img
+                src="/images/burnsy-about.jpg"
+                alt="Burnsy standing in front of a manga artwork wall"
+              />
+            </div>
+
+            <div>
+              <p class="eyebrow">Meet Burnsy</p>
+              <h2>Teacher. Creator. Lifelong Anime Fan.</h2>
+
+              <p>
+                I’m Adam “Burnsy” Burns, a high school computer science teacher,
+                soccer coach, lifelong anime fan, and content creator.
+              </p>
+
+              <p>
+                I create first-time reactions, honest reviews, interviews, and
+                educational content that helps fans discover what makes anime
+                such a powerful storytelling medium.
+              </p>
+
+              <p>
+                Whether you’ve watched anime for decades or you’re just
+                beginning, I’m glad you’re here.
+              </p>
+
+              <a class="text-link" href="/about/">Learn More About Burnsy →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="community">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Community</p>
+              <h2>Join the Conversation</h2>
+              <p>
+                Anime is always better when it’s shared. Choose your favorite
+                place to connect.
+              </p>
+            </div>
+
+            <div class="social-grid">
+              <a
+                class="social-card"
+                href={socialLinks.youtube}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h3>YouTube</h3>
+                <p>
+                  Long-form reactions, reviews, interviews, and discussions.
+                </p>
+                <span>Subscribe →</span>
+              </a>
+
+              <a
+                class="social-card"
+                href={socialLinks.tiktok}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h3>TikTok</h3>
+                <p>
+                  Anime recommendations, quick takes, and short-form content.
+                </p>
+                <span>Follow →</span>
+              </a>
+
+              <a
+                class="social-card"
+                href={socialLinks.instagram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h3>Instagram</h3>
+                <p>Behind the scenes, creator updates, and anime highlights.</p>
+                <span>Follow →</span>
+              </a>
+
+              <a
+                class="social-card"
+                href={socialLinks.patreon}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h3>Patreon</h3>
+                <p>Exclusive reactions, early access, and bonus content.</p>
+                <span>Become a Member →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section work-section" id="work">
+          <div class="container work-grid">
+            <div>
+              <p class="eyebrow">Professional Opportunities</p>
+              <h2>Let’s Build Something Together.</h2>
+
+              <p>
+                From anime publishers and gaming companies to conventions,
+                musicians, and media outlets, I’m interested in meaningful
+                collaborations that connect with anime fans.
+              </p>
+            </div>
+
+            <div>
+              <ul class="work-list">
+                <li>Brand Partnerships</li>
+                <li>Sponsored Campaigns</li>
+                <li>Convention Appearances</li>
+                <li>Panels and Speaking</li>
+                <li>Interviews and Podcasts</li>
+                <li>Press and Media</li>
+              </ul>
+
+              <div class="hero-actions">
+                <a class="button" href="/work-with-burnsy/">
+                  Work With Burnsy
+                </a>
+
+                <a class="button button-secondary" href="/contact/">
+                  Contact the Team
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      </Layout>

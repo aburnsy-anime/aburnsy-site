@@ -1,0 +1,108 @@
+---
+const socialLinks = {
+  youtube: "https://www.youtube.com/@aburnsy",
+  tiktok: "https://www.tiktok.com/@aburnsy",
+  instagram: "https://www.instagram.com/aburnsy_/",
+  snapchat: "https://www.snapchat.com/@aburnsy08",
+  patreon: "https://www.patreon.com/Aburnsy",
+};
+---
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div>
+
+            <a class="brand" href="/">
+                <img
+                    src="/images/branding/favicon.png"
+                    alt="Aburnsy Logo"
+                    class="brand-logo"
+                />
+
+                <span>ABURNSY</span>
+            </a>
+
+            <p>Helping You Discover the Best of Anime.</p>
+
+            <p class="footer-small">
+                Anime Educator • Creator • Reviewer • Interviewer
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <a href="/watch/">Watch</a>
+
+            <a href="/about/">About</a>
+
+            <a href="/work-with-burnsy/">Work With Burnsy</a>
+
+            <a href="/contact/">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Community</h3>
+
+            <a href={socialLinks.youtube}>YouTube</a>
+
+            <a href={socialLinks.tiktok}>TikTok</a>
+
+            <a href={socialLinks.instagram}>Instagram</a>
+
+            <a href={socialLinks.patreon}>Patreon</a>
+
+        </div>
+
+        <div>
+
+            <h3>Business</h3>
+
+            <a href="mailto:manager@aburnsy.com">
+                manager@aburnsy.com
+            </a>
+
+            <a href="mailto:press@aburnsy.com">
+                press@aburnsy.com
+            </a>
+
+            <a href="mailto:partnerships@aburnsy.com">
+                partnerships@aburnsy.com
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 Aburnsy. All rights reserved.
+        </span>
+
+    </div>
+
+    <style>
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+</style>
+
+</footer>
