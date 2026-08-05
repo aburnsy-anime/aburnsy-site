@@ -1433,9 +1433,24 @@
     grid-template-columns: 1fr;
   }
 
-  .hero-image-frame {
-    height: 430px;
-  }
+  .hero-image-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-image-frame {
+  width: 100%;
+  height: 430px;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+
+.hero-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+}
 
   .about-image-frame {
     min-height: 440px;
