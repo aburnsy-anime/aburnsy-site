@@ -15,6 +15,11 @@
       box-sizing: border-box;
     }
 
+    img,
+    iframe {
+      max-width: 100%;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -1399,9 +1404,22 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
+.watch-hero-grid {
+  gap: 42px;
+  overflow: hidden;
+}
+
+.watch-hero-grid > * {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
 .watch-hero-grid > div:first-child,
+.watch-hero .eyebrow,
+.watch-hero h1,
 .watch-hero-lead,
-.watch-hero .eyebrow {
+.watch-hero .hero-actions {
   width: 100%;
   min-width: 0;
   max-width: 100%;
@@ -1409,6 +1427,11 @@
 
 .watch-hero .eyebrow {
   white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.watch-hero h1 {
+  font-size: clamp(2.8rem, 13vw, 4.1rem);
   overflow-wrap: anywhere;
 }
 
@@ -1588,6 +1611,7 @@
   height: 430px;
   min-width: 0;
   min-height: 0;
+  max-width: 100%;
 }
 
   .latest-youtube-grid {
