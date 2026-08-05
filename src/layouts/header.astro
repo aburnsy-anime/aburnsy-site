@@ -1,78 +1,254 @@
 ---
 const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath.startsWith(path);
+};
 ---
 
-<header class="site-header">
-    <div class="container nav-wrap">
+<header class="site-header" data-site-header>
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="Aburnsy home">
+      <img
+        src="/images/branding/favicon.png"
+        alt=""
+        class="brand-logo"
+      />
+      <span>ABURNSY</span>
+    </a>
 
-        <a class="brand" href="/">
-            <img
-                src="/images/branding/favicon.png"
-                alt="Aburnsy Logo"
-                class="brand-logo"
-            />
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/" class={isActive("/") ? "active" : ""}>Home</a>
 
-            <span>ABURNSY</span>
+      <a
+        href="/watch/"
+        class={isActive("/watch") ? "active" : ""}
+      >
+        Watch
+      </a>
+
+      <a
+        href="/about/"
+        class={isActive("/about") ? "active" : ""}
+      >
+        About
+      </a>
+
+      <a
+        href="/work-with-burnsy/"
+        class={isActive("/work-with-burnsy") ? "active" : ""}
+      >
+        Work With Burnsy
+      </a>
+
+      <a
+        href="/contact/"
+        class={isActive("/contact") ? "active" : ""}
+      >
+        Contact
+      </a>
+    </nav>
+
+    <a
+      class="button button-small header-youtube"
+      href="https://www.youtube.com/@aburnsy"
+      target="_blank"
+      rel="noreferrer"
+    >
+      YouTube
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div
+    class="mobile-menu"
+    id="mobile-menu"
+    aria-hidden="true"
+    data-mobile-menu
+  >
+    <div class="mobile-menu-backdrop" data-menu-close></div>
+
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-top">
+        <a class="brand mobile-menu-brand" href="/" data-menu-link>
+          <img
+            src="/images/branding/favicon.png"
+            alt=""
+            class="brand-logo"
+          />
+          <span>ABURNSY</span>
         </a>
 
-        <nav class="main-nav" aria-label="Primary navigation">
+        <button
+          class="menu-close"
+          type="button"
+          aria-label="Close navigation"
+          data-menu-close
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-            <a
-                href="/watch/"
-                class={currentPath.startsWith("/watch") ? "active" : ""}
-            >
-                Watch
-            </a>
-
-            <a
-                href="/about/"
-                class={currentPath.startsWith("/about") ? "active" : ""}
-            >
-                About
-            </a>
-
-            <a
-                href="/work-with-burnsy/"
-                class={currentPath.startsWith("/work-with-burnsy") ? "active" : ""}
-            >
-                Work With Burnsy
-            </a>
-
-            <a
-                href="/contact/"
-                class={currentPath.startsWith("/contact") ? "active" : ""}
-            >
-                Contact
-            </a>
-
-        </nav>
+      <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+        <a href="/" class={isActive("/") ? "active" : ""} data-menu-link>
+          <span>01</span>
+          Home
+        </a>
 
         <a
-            class="button button-small"
-            href="https://www.youtube.com/@aburnsy"
-            target="_blank"
-            rel="noreferrer"
+          href="/watch/"
+          class={isActive("/watch") ? "active" : ""}
+          data-menu-link
         >
-            YouTube
+          <span>02</span>
+          Watch
         </a>
 
-        <style>
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+        <a
+          href="/about/"
+          class={isActive("/about") ? "active" : ""}
+          data-menu-link
+        >
+          <span>03</span>
+          About
+        </a>
 
-  .brand-logo {
-    width: 34px;
-    height: 34px;
-    max-width: 34px;
-    max-height: 34px;
-    display: block;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-</style>
+        <a
+          href="/work-with-burnsy/"
+          class={isActive("/work-with-burnsy") ? "active" : ""}
+          data-menu-link
+        >
+          <span>04</span>
+          Work With Burnsy
+        </a>
 
+        <a
+          href="/contact/"
+          class={isActive("/contact") ? "active" : ""}
+          data-menu-link
+        >
+          <span>05</span>
+          Contact
+        </a>
+      </nav>
+
+      <div class="mobile-menu-actions">
+        <a
+          class="button"
+          href="https://www.youtube.com/@aburnsy"
+          target="_blank"
+          rel="noreferrer"
+          data-menu-link
+        >
+          Watch on YouTube
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="/work-with-burnsy/"
+          data-menu-link
+        >
+          Work With Burnsy
+        </a>
+      </div>
+
+      <div class="mobile-menu-socials">
+        <a
+          href="https://www.tiktok.com/@aburnsy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          TikTok
+        </a>
+
+        <a
+          href="https://www.instagram.com/aburnsy_/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.patreon.com/Aburnsy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Patreon
+        </a>
+      </div>
     </div>
+  </div>
 </header>
+
+<script is:inline>
+  const header = document.querySelector("[data-site-header]");
+  const menu = document.querySelector("[data-mobile-menu]");
+  const toggle = document.querySelector("[data-menu-toggle]");
+
+  const setMenuState = (isOpen) => {
+    if (!(menu instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    menu.classList.toggle("is-open", isOpen);
+    menu.setAttribute("aria-hidden", String(!isOpen));
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation",
+    );
+
+    document.body.classList.toggle("menu-open", isOpen);
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  document.querySelectorAll("[data-menu-close], [data-menu-link]").forEach(
+    (element) => {
+      element.addEventListener("click", () => setMenuState(false));
+    },
+  );
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenuState(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) {
+      setMenuState(false);
+    }
+  });
+
+  const updateHeader = () => {
+    if (!(header instanceof HTMLElement)) {
+      return;
+    }
+
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+</script>
