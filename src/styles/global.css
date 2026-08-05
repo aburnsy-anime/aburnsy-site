@@ -1642,4 +1642,12 @@
   .watch-final-inner {
     gap: 30px;
   }
+  @media (max-width: 640px) {
+  .watch-hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.65rem, 11vw, 3.4rem);
+    letter-spacing: -0.055em;
+  }
+}
 }
