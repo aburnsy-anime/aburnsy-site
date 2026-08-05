@@ -3,12 +3,10 @@ import Layout from "../layouts/layout.astro";
 
 const links = {
   youtube: "https://www.youtube.com/@aburnsy",
-  youtubeLatest:
-    "https://www.youtube.com/playlist?list=PLXvgarzxz5v0",
+  youtubeLatest: "https://www.youtube.com/playlist?list=PLXvgarzxz5v0",
   tiktok: "https://www.tiktok.com/@aburnsy",
   instagram: "https://www.instagram.com/aburnsy_/",
-  recommendationTool:
-    "https://aburnsy-what-to-watch-wizard.streamlit.app/",
+  recommendationTool: "https://aburnsy-what-to-watch-wizard.streamlit.app/",
 };
 
 const youtubeEmbed =
@@ -33,12 +31,7 @@ const youtubeEmbed =
         </p>
 
         <div class="hero-actions">
-          <a
-            class="button"
-            href="#latest-youtube"
-          >
-            Watch the Latest
-          </a>
+          <a class="button" href="#latest-youtube"> Watch the Latest </a>
 
           <a
             class="button button-secondary"
@@ -66,7 +59,6 @@ const youtubeEmbed =
         <p class="eyebrow">Latest on YouTube</p>
 
         <h2>Watch Burnsy’s Newest Reaction.</h2>
-
       </div>
 
       <div class="latest-youtube-grid">
@@ -76,8 +68,7 @@ const youtubeEmbed =
             title="Latest Aburnsy YouTube reaction"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
 
         <div class="latest-youtube-copy">
@@ -123,11 +114,7 @@ const youtubeEmbed =
               <h3>@aburnsy</h3>
             </div>
 
-            <a
-              href={links.tiktok}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={links.tiktok} target="_blank" rel="noreferrer">
               Open TikTok →
             </a>
           </div>
@@ -159,11 +146,7 @@ const youtubeEmbed =
               <h3>@aburnsy_</h3>
             </div>
 
-            <a
-              href={links.instagram}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={links.instagram} target="_blank" rel="noreferrer">
               Open Instagram →
             </a>
           </div>
@@ -171,13 +154,10 @@ const youtubeEmbed =
           <div class="social-embed-frame social-embed-frame-instagram">
             <blockquote
               class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/aburnsy_/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/aburnsy_/?utm_source=ig_embed&utm_campaign=loading"
               data-instgrm-version="14"
             >
-              <a
-                href="https://www.instagram.com/aburnsy_/"
-                target="_blank"
-              >
+              <a href="https://www.instagram.com/aburnsy_/" target="_blank">
                 View @aburnsy_ on Instagram
               </a>
             </blockquote>
@@ -238,26 +218,13 @@ const youtubeEmbed =
         </p>
       </div>
 
-      <a
-        class="button"
-        href={links.youtube}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a class="button" href={links.youtube} target="_blank" rel="noreferrer">
         Subscribe on YouTube
       </a>
     </div>
   </section>
 
-  <script
-    is:inline
-    async
-    src="https://www.tiktok.com/embed.js"
-  ></script>
+  <script is:inline async src="https://www.tiktok.com/embed.js"></script>
 
-  <script
-    is:inline
-    async
-    src="https://www.instagram.com/embed.js"
-  ></script>
+  <script is:inline async src="https://www.instagram.com/embed.js"></script>
 </Layout>
